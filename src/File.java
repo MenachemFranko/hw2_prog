@@ -27,7 +27,8 @@ public class File extends StorageItem{
     }
 
     void printContent(){
-        String header = String.format("%s Size: %d Created: %o", getName(), this.size, this.date);
+        String header = String.format("%s Size: %d Created: ", getName(), this.size);
+        header+= this.getDate();
         System.out.println(header);
         System.out.println(this.content);
  }
