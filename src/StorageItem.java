@@ -16,11 +16,15 @@ abstract class StorageItem {
         if(rndTime<0){
             rndTime=-rndTime;
         }
-        long boundedTimeInMs = (((rndTime - LOW_BOUND)% (HIGH_BOUND - LOW_BOUND) + LOW_BOUND));
+        long boundedTimeInMs = (((rndTime - LOW_BOUND) % (HIGH_BOUND - LOW_BOUND) + LOW_BOUND));
         this.date = new Date(boundedTimeInMs);
     }
-    abstract void setSize();
-    public abstract int getSize();
+    void setSize(int size){
+        this.size = size;
+    }
+    public int getSize(){
+        return this.size;
+    }
 
     String getName(){
         return this.name;

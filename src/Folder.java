@@ -10,14 +10,17 @@ public class Folder extends StorageItem{
 
     }
 
-
-    @Override
     void setSize() {
+        size=0;
+        for(StorageItem storageItem : content){
+            size += storageItem.getSize();//unsure if need some kind of casting here
+        }
+        super.setSize(size);
 
     }
 
     @Override
     public int getSize() {
-        return 0;
+        return super.getSize();
     }
 }
