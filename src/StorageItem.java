@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 abstract class StorageItem {
-    static ArrayList<StorageItem> pc = new ArrayList<StorageItem>();
+    static ArrayList<StorageItem> pc = new ArrayList<>();
     final static long LOW_BOUND = 1483228800000L;
     final static long HIGH_BOUND = 1640908800000L;
     private String name;
@@ -23,7 +23,7 @@ abstract class StorageItem {
     public void setLocation(ArrayList<StorageItem> location){
         this.location = location;
     }
-    public ArrayList<StorageItem> getLocation(){return this.location};
+    public ArrayList<StorageItem> getLocation(){return this.location;}
     void makeData(long rndTime){
         if(rndTime<0){
             rndTime=-rndTime;
@@ -47,11 +47,11 @@ abstract class StorageItem {
 
     private void sortFolder(SortingField field) {// here we sort current Folder
         Comparator<StorageItem> comparator = switch (field) {
-            case DATE -> (StorageItem firstFile, StorageItem secondFile) -> firstFile.getDate().compareTo(secondFile.getDate());
-            case NAME -> (StorageItem firstFile, StorageItem secondFile) -> firstFile.getName().compareTo(secondFile.getName());
-            case SIZE -> (StorageItem firstFile, StorageItem secondFile) -> firstFile.getSize() - secondFile.getSize();
+            case DATE -> Comparator.comparing(StorageItem::getDate);
+            case NAME -> Comparator.comparing(StorageItem::getName);
+            case SIZE -> Comparator.comparingInt(StorageItem::getSize);
         };
-        this.location.content.sort(comparator);
+        this.location.sort(comparator);
         }
 
 
