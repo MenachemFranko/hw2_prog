@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb079f08-8861-463a-9b62-e11df0af413b" name="Default Changelist" comment="mlelef">
+    <list default="true" id="bb079f08-8861-463a-9b62-e11df0af413b" name="Default Changelist" comment="blank files&#10;built File.java&#10;built StorageItem.java  still need to build sort function and print.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Folder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Folder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StorageItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StorageItem.java" afterDir="false" />
@@ -128,19 +128,6 @@
       <option name="presentableId" value="Default" />
       <updated>1623862048227</updated>
     </task>
-    <task id="LOCAL‎00001" summary="mlelef">
-      <created>1624209565468</created>
-      <option name="number" value="LOCAL‎00001" />
-      <option name="presentableId" value="LOCAL‎00001" />
-      <updated>1624209565468</updated>
-    </task>
-    <task id="LOCAL‎00002" summary="mlelef">
-      <created>1624211876778</created>
-      <option name="number" value="LOCAL‎00002" />
-      <option name="presentableId" value="LOCAL‎00002" />
-      <updated>1624211876778</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,10 +140,9 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="mlelef" />
-    <option name="LAST_COMMIT_MESSAGE" value="mlelef" />
+    <MESSAGE value="blank files&#10;built File.java&#10;built StorageItem.java  still need to build sort function and print." />
+    <option name="LAST_COMMIT_MESSAGE" value="blank files&#10;built File.java&#10;built StorageItem.java  still need to build sort function and print." />
   </component>
 </project>
