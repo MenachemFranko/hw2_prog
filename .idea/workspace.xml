@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb079f08-8861-463a-9b62-e11df0af413b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/File.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Folder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SortingField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StorageItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/תרגיל בית 2.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/תרגיל בית 2.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Folder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Folder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SortingField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortingField.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,5 +140,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
