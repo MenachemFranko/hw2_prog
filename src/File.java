@@ -6,16 +6,14 @@ public class File extends StorageItem{
      this.ext = ext;
      this.content = "";
  }
-
-    @Override
     void setSize() {
-     this.size = this.content.length(); //make in mb??
-
+        super.setSize(this.content.length()); //make in mb??
     }
 
     @Override
     public int getSize() {
-        return this.size;
+     this.setSize();
+     return this.size;
     }
 
     @Override

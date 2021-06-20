@@ -6,14 +6,11 @@ abstract class StorageItem {
     private String name;
     Date date;
     int size;
-    private Folder location;               // i think we need this for printing, or maybe location?
+    String path;               // i think we need this for printing, or maybe location?
     public StorageItem(String name){
         this.name = name;
         makeData(Main.rnd.nextLong());
         this.size = 0;
-    }
-    public void setLocation(Folder folder){
-        this.location = folder;
     }
     void makeData(long rndTime){
         if(rndTime<0){
@@ -25,9 +22,7 @@ abstract class StorageItem {
     void setSize(int size){
         this.size = size;
     }
-    public int getSize(){
-        return this.size;
-    }
+    public abstract int getSize();
 
     String getName(){
         return this.name;

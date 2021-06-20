@@ -17,14 +17,16 @@ public class Folder extends StorageItem{
         }
         return true;
     }
-    @Override
-    public int getSize() {
+    public void setSize() {
         size=0;
         for(StorageItem storageItem : content){
             size += storageItem.getSize();//unsure if need some kind of casting here
         }
         super.setSize(size);
-        return size;
-
+    }
+    @Override
+    public int getSize() {
+        this.setSize();
+        return this.size;
     }
 }
