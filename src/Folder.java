@@ -9,12 +9,16 @@ public class Folder extends StorageItem{
         this.content = new ArrayList<StorageItem>();
     }
     public boolean addItem(StorageItem item){
-        for(StorageItem storageItem : this.content){
-            if(storageItem.getName() == item.getName())
+        for(StorageItem storageItem : this.content) {
+            if (storageItem.getName().equals(item.getName()))
                 return false;
+        }
         this.content.add(item);
         item.setLocation(this);
-        }
+        return true;
+    }
+    public File findFile(String path){
+
     }
 
 
