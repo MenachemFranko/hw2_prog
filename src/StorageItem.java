@@ -4,13 +4,17 @@ abstract class StorageItem {
     final static long LOW_BOUND = 1483228800000L;
     final static long HIGH_BOUND = 1640908800000L;;
     private String name;
-    Date date;
+    private Date date;
     int size;
-    String path;               // i think we need this for printing, or maybe location?
+    private Folder location;               // i think we need this for printing, or maybe location?
     public StorageItem(String name){
         this.name = name;
         makeData(Main.rnd.nextLong());
         this.size = 0;
+    }
+    public Date getDate(){return this.date};
+    public void setLocation(Folder folder){
+        this.location = folder;
     }
     void makeData(long rndTime){
         if(rndTime<0){
