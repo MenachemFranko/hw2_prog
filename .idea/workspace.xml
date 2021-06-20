@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb079f08-8861-463a-9b62-e11df0af413b" name="Default Changelist" comment="blank files&#10;built File.java&#10;built StorageItem.java  still need to build sort function and print.">
+    <list default="true" id="bb079f08-8861-463a-9b62-e11df0af413b" name="Default Changelist" comment="mlelef">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Folder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Folder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StorageItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StorageItem.java" afterDir="false" />
@@ -140,6 +140,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="blank files&#10;built File.java&#10;built StorageItem.java  still need to build sort function and print." />

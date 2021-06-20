@@ -1,8 +1,7 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class Folder extends StorageItem{
-    List<StorageItem> content;
+    ArrayList<StorageItem> content;
 
     public Folder(String name) {
         super(name);
@@ -12,8 +11,9 @@ public class Folder extends StorageItem{
         for(StorageItem storageItem : this.content){
             if(storageItem.getName().equals(item.getName()))
                 return false;
+        item.getLocation().remove(item);
         this.content.add(item);
-        item.setLocation(this);
+        item.setLocation(this.content);
         }
         return true;
     }
@@ -29,4 +29,18 @@ public class Folder extends StorageItem{
         this.setSize();
         return this.size;
     }
-}
+    public File findFile(String receivedPath){
+        String [] path = receivedPath.split("/");
+        for(StorageItem storageItem : pc){
+            if(storageItem.getName().equals(path[0])){
+                if(!(storageItem instanceof Folder) && path.length == 1)
+                    return (File) storageItem;
+            }
+        }
+        return null;
+    }
+    public File findFileAux(Folder folder, String [] path, int x){
+        for(StorageItem storageItem : folder.content){
+            if(path[x])
+        }
+    }
