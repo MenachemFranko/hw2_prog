@@ -51,31 +51,32 @@ abstract class StorageItem {
                 comparator =  Comparator.comparing(StorageItem::getName);
         }
         this.location.sort(comparator);
+        this.sortTree(comparator);
+        System.out.println(this.getName());
         if(this instanceof Folder)
-            ((Folder) this).content.sort(comparator);
-        sortTree(comparator);
-        printTree(1,this.location,this.location.indexOf(this));
+            printTree(1,((Folder) this).content);
         }
 
     private void sortTree(Comparator<StorageItem> comparator) {
-        if(this instanceof Folder)
+        if(this instanceof Folder){
+            ((Folder) this).content.sort(comparator);
             for (StorageItem item : ((Folder) this).content)
                 if (item instanceof Folder)
                     item.sortTree(comparator);
+        }
     }
-    private void printTree(int howDeep, ArrayList<StorageItem> folder, int index){// here we do the printing (using recursion and for loop?)
-        for(; index<folder.size();index++){
-            StorageItem currentItem=folder.get(index);
+    private void printTree(int howDeep, ArrayList<StorageItem> folder){// here we do the printing (using recursion and for loop?)
+        for (StorageItem currentItem : folder) {
             indent(howDeep);
             System.out.println(currentItem.getName());
-            if(currentItem instanceof Folder){
-                currentItem.printTree(howDeep+1, ((Folder) currentItem).content, 0);
+            if (currentItem instanceof Folder) {
+                currentItem.printTree(howDeep + 1, ((Folder) currentItem).content);
             }
         }
 
     }
     private void indent(int indent){
         for(int count = 0; count < indent; count++)
-            System.out.print("|");
+            System.out.print("|    ");
     }
 }
