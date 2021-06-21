@@ -49,12 +49,12 @@ abstract class StorageItem {
                 break;
             default:
                 comparator =  Comparator.comparing(StorageItem::getName);
-        };
+        }
         this.location.sort(comparator);
         if(this instanceof Folder)
             ((Folder) this).content.sort(comparator);
         sortTree(comparator);
-        printTree(1);
+        printTree(1,this.location,this.location.indexOf(this));
         }
 
     private void sortTree(Comparator<StorageItem> comparator) {
@@ -63,13 +63,13 @@ abstract class StorageItem {
                 if (item instanceof Folder)
                     item.sortTree(comparator);
     }
-    private void printTree(int howDeep){// here we do the printing (using recursion and for loop?)
-        for(int index = this.location.indexOf(this)+1; index<this.location.size();index++){
-            StorageItem currentItem=this.location.get(index);
+    private void printTree(int howDeep, ArrayList<StorageItem> folder, int index){// here we do the printing (using recursion and for loop?)
+        for(; index<folder.size();index++){
+            StorageItem currentItem=folder.get(index);
             indent(howDeep);
             System.out.println(currentItem.getName());
             if(currentItem instanceof Folder){
-                currentItem.printTree(howDeep+1);
+                currentItem.printTree(howDeep+1, ((Folder) currentItem).content, 0);
             }
         }
 

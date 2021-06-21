@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb079f08-8861-463a-9b62-e11df0af413b" name="Default Changelist" comment="mlelef">
+    <list default="true" id="bb079f08-8861-463a-9b62-e11df0af413b" name="Default Changelist" comment="sort work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Folder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Folder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StorageItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StorageItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +93,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="inlay.hints.JAVA" />
   </component>
   <component name="RecentsManager">
@@ -102,8 +105,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="9" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="15" />
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="hw2" />
       <RunnerSettings RunnerId="Run" />
@@ -127,13 +129,55 @@
       <option name="presentableId" value="Default" />
       <updated>1623862048227</updated>
     </task>
-    <task id="LOCAL‎00001" summary="mlelef">
-      <created>1624216224561</created>
+    <task id="LOCAL‎00001" summary="setSize getSize for Folder">
+      <created>1624211936526</created>
       <option name="number" value="LOCAL‎00001" />
       <option name="presentableId" value="LOCAL‎00001" />
-      <updated>1624216224561</updated>
+      <updated>1624211936526</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL‎00002" summary="setSize getSize for Folder">
+      <created>1624212475796</created>
+      <option name="number" value="LOCAL‎00002" />
+      <option name="presentableId" value="LOCAL‎00002" />
+      <updated>1624212475796</updated>
+    </task>
+    <task id="LOCAL‎00003" summary="setSize getSize for Folder">
+      <created>1624213222193</created>
+      <option name="number" value="LOCAL‎00003" />
+      <option name="presentableId" value="LOCAL‎00003" />
+      <updated>1624213222193</updated>
+    </task>
+    <task id="LOCAL‎00004" summary="sortFloder in  StorgeItem">
+      <created>1624216488699</created>
+      <option name="number" value="LOCAL‎00004" />
+      <option name="presentableId" value="LOCAL‎00004" />
+      <updated>1624216488699</updated>
+    </task>
+    <task id="LOCAL‎00005" summary="sortFloder in  StorgeItem">
+      <created>1624217074319</created>
+      <option name="number" value="LOCAL‎00005" />
+      <option name="presentableId" value="LOCAL‎00005" />
+      <updated>1624217074319</updated>
+    </task>
+    <task id="LOCAL‎00006" summary="printTree">
+      <created>1624218736236</created>
+      <option name="number" value="LOCAL‎00006" />
+      <option name="presentableId" value="LOCAL‎00006" />
+      <updated>1624218736236</updated>
+    </task>
+    <task id="LOCAL‎00007" summary="fixed v15 not working">
+      <created>1624295433748</created>
+      <option name="number" value="LOCAL‎00007" />
+      <option name="presentableId" value="LOCAL‎00007" />
+      <updated>1624295433748</updated>
+    </task>
+    <task id="LOCAL‎00008" summary="sort work">
+      <created>1624297736807</created>
+      <option name="number" value="LOCAL‎00008" />
+      <option name="presentableId" value="LOCAL‎00008" />
+      <updated>1624297736807</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,11 +190,24 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="blank files&#10;built File.java&#10;built StorageItem.java  still need to build sort function and print." />
-    <MESSAGE value="mlelef" />
-    <option name="LAST_COMMIT_MESSAGE" value="mlelef" />
+    <MESSAGE value="setSize getSize for Folder" />
+    <MESSAGE value="sortFloder in  StorgeItem" />
+    <MESSAGE value="printTree" />
+    <MESSAGE value="fixed v15 not working" />
+    <MESSAGE value="sort work" />
+    <option name="LAST_COMMIT_MESSAGE" value="sort work" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint type="java-exception">
+          <properties class="java.lang.StackOverflowError" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
