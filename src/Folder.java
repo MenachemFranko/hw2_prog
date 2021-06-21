@@ -5,7 +5,7 @@ public class Folder extends StorageItem{
 
     public Folder(String name) {
         super(name);
-        this.content = new ArrayList<StorageItem>();
+        this.content = new ArrayList<>();
     }
     public boolean addItem(StorageItem item){
         for(StorageItem storageItem : this.content){
@@ -33,7 +33,9 @@ public class Folder extends StorageItem{
         String [] path = receivedPath.split("/");
         for(StorageItem storageItem : pc){
             if(storageItem.getName().equals(path[0])){
-                if(!(storageItem instanceof Folder) && path.length == 1)
+                if(storageItem instanceof Folder)
+                    return findFileAux((Folder) storageItem, path, 1);
+                else if (path.length == 1)
                     return (File) storageItem;
             }
         }
@@ -41,6 +43,13 @@ public class Folder extends StorageItem{
     }
     public File findFileAux(Folder folder, String [] path, int x){
         for(StorageItem storageItem : folder.content){
-            if(path[x])
+            if(storageItem.getName().equals(path[x])){
+                if(storageItem instanceof Folder)
+                    return findFileAux((Folder) storageItem, path, x+1);
+                else if (path.length == x+1)
+                    return (File) storageItem;
+            }
         }
+        return null;
+    }
     }
