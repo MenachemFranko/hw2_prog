@@ -39,10 +39,16 @@ abstract class StorageItem {
     }
 
     void printTree(SortingField field){
-        Comparator<StorageItem> comparator = switch (field) {
-            case DATE -> Comparator.comparing(StorageItem::getDate);
-            case NAME -> Comparator.comparing(StorageItem::getName);
-            case SIZE -> Comparator.comparingInt(StorageItem::getSize);
+        Comparator<StorageItem> comparator;
+        switch (field) {
+            case DATE:
+                comparator = Comparator.comparing(StorageItem::getDate);
+                break;
+            case SIZE:
+                comparator = Comparator.comparingInt(StorageItem::getSize);
+                break;
+            default:
+                comparator =  Comparator.comparing(StorageItem::getName);
         };
         sortTree(comparator);
         printTree(1);
