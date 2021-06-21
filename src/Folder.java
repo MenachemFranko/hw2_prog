@@ -8,13 +8,13 @@ public class Folder extends StorageItem{
         this.content = new ArrayList<>();
     }
     public boolean addItem(StorageItem item){
-        for(StorageItem storageItem : this.content){
-            if(storageItem.getName().equals(item.getName()))
+        for(StorageItem storageItem : this.content) {
+            if (storageItem.getName().equals(item.getName()))
                 return false;
+        }
         item.getLocation().remove(item);
         this.content.add(item);
         item.setLocation(this.content);
-        }
         return true;
     }
     public void setSize() {
@@ -22,7 +22,7 @@ public class Folder extends StorageItem{
         for(StorageItem storageItem : content){
             size += storageItem.getSize();//unsure if need some kind of casting here
         }
-        super.setSize(size);
+        this.setSize(size);
     }
     @Override
     public int getSize() {

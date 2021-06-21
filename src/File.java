@@ -12,7 +12,6 @@ public class File extends StorageItem{
 
     @Override
     public int getSize() {
-     this.setSize();
      return this.size;
     }
 
@@ -23,7 +22,7 @@ public class File extends StorageItem{
 
     void addContent(String contentToAdd){
      this.content = this.content + contentToAdd;
-
+     this.setSize();
     }
 
     void printContent(){
