@@ -12,7 +12,7 @@ abstract class StorageItem {
     private ArrayList<StorageItem> location;               // i think we need this for printing, or maybe location?
     public StorageItem(String name){
         this.name = name;
-        makeData(Main.rnd.nextLong());
+        makeData(Math.abs(Main.rnd.nextLong()));
         this.size = 0;
         this.location = pc;
         pc.add(this);
