@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb079f08-8861-463a-9b62-e11df0af413b" name="Default Changelist" comment="printTree done,&#10;findfile need fix">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bb079f08-8861-463a-9b62-e11df0af413b" name="Default Changelist" comment="printTree done,&#10;findfile fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/File.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Folder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Folder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SortingField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortingField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StorageItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StorageItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +192,13 @@
       <option name="presentableId" value="LOCAL‎00010" />
       <updated>1624302090967</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL‎00011" summary="printTree done,&#10;findfile fixed">
+      <created>1624346529167</created>
+      <option name="number" value="LOCAL‎00011" />
+      <option name="presentableId" value="LOCAL‎00011" />
+      <updated>1624346529167</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,7 +221,8 @@
     <MESSAGE value="fixed v15 not working" />
     <MESSAGE value="sort work" />
     <MESSAGE value="printTree done,&#10;findfile need fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="printTree done,&#10;findfile need fix" />
+    <MESSAGE value="printTree done,&#10;findfile fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="printTree done,&#10;findfile fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -224,7 +233,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/StorageItem.java</url>
-          <line>71</line>
+          <line>83</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
