@@ -1,6 +1,6 @@
 import java.util.Comparator;
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Timestamp;
 
 abstract class StorageItem {
     /*
@@ -10,9 +10,9 @@ abstract class StorageItem {
     final static long LOW_BOUND = 1483228800000L;
     final static long HIGH_BOUND = 1640908800000L;
     private final String name;
-    private Date date;
+    private Timestamp date;
     int size;
-    private ArrayList<StorageItem> location;               // i think we need this for printing, or maybe location?
+    private ArrayList<StorageItem> location;
 
     public StorageItem(String name) {
         /*
@@ -22,17 +22,10 @@ abstract class StorageItem {
         @param: name: the name of the item
          */
         this.name = name;
-        makeData(Math.abs(Main.rnd.nextLong()));
+        makeData(Main.rnd.nextLong());
         this.size = 0;
         this.location = pc;
         pc.add(this);
-    }
-
-    public Date getDate() {
-        /*
-        return the creation date of the item
-         */
-        return this.date;
     }
 
     public void setLocation(ArrayList<StorageItem> location) {
@@ -59,7 +52,7 @@ abstract class StorageItem {
             rndTime = -rndTime;
         }
         long boundedTimeInMs = (((rndTime - LOW_BOUND) % (HIGH_BOUND - LOW_BOUND) + LOW_BOUND));
-        this.date = new Date(boundedTimeInMs);
+        this.date = new Timestamp(boundedTimeInMs);
     }
 
     void setSize(int size) {
@@ -70,13 +63,11 @@ abstract class StorageItem {
         this.size = size;
     }
 
-    public abstract int getSize();
-
-    String getName() {
-        return this.name;
-    }
-
     void printTree(SortingField field) {
+        /*
+        sort and print all files that stem from the obj using the field given.
+        @param: field: the field we want the folders to be sorted by
+         */
         Comparator<StorageItem> comparator;
         switch (field) {
             case DATE:
@@ -96,6 +87,10 @@ abstract class StorageItem {
     }
 
     private void sortTree(Comparator<StorageItem> comparator) {
+        /*
+        sort all subsequent folders using the comparator
+        @param: comparator: the comparator to use to sort folders
+         */
         if (this instanceof Folder) {
             ((Folder) this).content.sort(comparator);
             for (StorageItem item : ((Folder) this).content)
@@ -104,7 +99,12 @@ abstract class StorageItem {
         }
     }
 
-    private void printTree(int howDeep, ArrayList<StorageItem> folder) {// here we do the printing (using recursion and for loop?)
+    private void printTree(int howDeep, ArrayList<StorageItem> folder) {
+        /*
+        get a folder and print all items in that folder, including items within further folders
+        @param: howDeep: current depth of the function, needed for printing purposes
+        @param: folder: folder to be printed
+         */
         for (StorageItem currentItem : folder) {
             indent(howDeep);
             System.out.println(currentItem.getName());
@@ -116,7 +116,27 @@ abstract class StorageItem {
     }
 
     private void indent(int indent) {
+        /*
+        indent the printing as required
+        @param: indent: how many indents to print
+         */
         for (int count = 0; count < indent; count++)
             System.out.print("|    ");
+    }
+
+    String getName() {
+        /*
+        return the name of the item
+         */
+        return this.name;
+    }
+
+    public abstract int getSize();
+
+    public Timestamp getDate() {
+        /*
+        return the creation date of the item
+         */
+        return this.date;
     }
 }

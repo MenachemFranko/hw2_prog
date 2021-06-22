@@ -39,7 +39,7 @@ public class Folder extends StorageItem {
          */
         size = 0;
         for (StorageItem storageItem : content) {
-            size += storageItem.getSize();//unsure if need some kind of casting here
+            size += storageItem.getSize();
         }
         this.setSize(size);
     }

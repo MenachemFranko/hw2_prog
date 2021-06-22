@@ -51,7 +51,7 @@ public class File extends StorageItem {
         /*
         print the size, creation date and content of the file
          */
-        String header = String.format("%s Size: %d Created: ", getName(), this.size);
+        String header = String.format("%s Size: %dMB Created: ", getName(), this.size);
         header += this.getDate();
         System.out.println(header);
         System.out.println(this.content);
