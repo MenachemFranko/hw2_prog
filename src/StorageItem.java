@@ -76,7 +76,6 @@ abstract class StorageItem {
             default:
                 comparator = Comparator.comparing(StorageItem::getName);
         }
-        this.location.sort(comparator);
         this.sortTree(comparator);
         System.out.println(this.getName());
         if (this instanceof Folder)
