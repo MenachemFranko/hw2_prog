@@ -31,7 +31,7 @@ public class Folder extends StorageItem{
     }
     public File findFile(String receivedPath){
         String [] path = receivedPath.split("/");
-        for(StorageItem storageItem : pc){
+        for(StorageItem storageItem : this.content){
             if(storageItem.getName().equals(path[0])){
                 if(storageItem instanceof Folder)
                     return findFileAux((Folder) storageItem, path, 1);
