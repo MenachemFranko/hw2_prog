@@ -7,8 +7,8 @@ abstract class StorageItem {
     storage item may be a folder or a file. has a name, size, creation date, location.
      */
     static ArrayList<StorageItem> pc = new ArrayList<>();
-    final static long LOW_BOUND = 1483228800000L;
-    final static long HIGH_BOUND = 1640908800000L;
+    final static long LOW_BOUND = Timestamp.valueOf("2017-01-01 00:00:00").getTime();
+    final static long HIGH_BOUND = Timestamp.valueOf("2021-12-31 23:59:59").getTime();
     private final String name;
     private Timestamp date;
     int size;
@@ -22,7 +22,7 @@ abstract class StorageItem {
         @param: name: the name of the item
          */
         this.name = name;
-        makeData(Main.rnd.nextLong());
+        makeData(Math.abs(Main.rnd.nextLong()));
         this.size = 0;
         this.location = pc;
         pc.add(this);
@@ -48,10 +48,7 @@ abstract class StorageItem {
         receives a random number and cast it to date and time. initialize the creation date of the item.
         @param: rndTime: random num to cast
          */
-        if (rndTime < 0) {
-            rndTime = -rndTime;
-        }
-        long boundedTimeInMs = (((rndTime - LOW_BOUND) % (HIGH_BOUND - LOW_BOUND) + LOW_BOUND));
+        long boundedTimeInMs = ((rndTime) % (HIGH_BOUND - LOW_BOUND) + LOW_BOUND);
         this.date = new Timestamp(boundedTimeInMs);
     }
 
