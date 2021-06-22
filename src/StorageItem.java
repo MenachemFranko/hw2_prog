@@ -3,6 +3,9 @@ import java.util.ArrayList;
 import java.util.Date;
 
 abstract class StorageItem {
+    /*
+    storage item may be a folder or a file. has a name, size, creation date, location.
+     */
     static ArrayList<StorageItem> pc = new ArrayList<>();
     final static long LOW_BOUND = 1483228800000L;
     final static long HIGH_BOUND = 1640908800000L;
@@ -12,6 +15,12 @@ abstract class StorageItem {
     private ArrayList<StorageItem> location;               // i think we need this for printing, or maybe location?
 
     public StorageItem(String name) {
+        /*
+        the constructor of the storage item. receives the name for the new item and initialize it.
+        in addition, initialize the creation date randomly, the size to zero and the location to the
+        main location in the pc
+        @param: name: the name of the item
+         */
         this.name = name;
         makeData(Math.abs(Main.rnd.nextLong()));
         this.size = 0;
@@ -20,18 +29,32 @@ abstract class StorageItem {
     }
 
     public Date getDate() {
+        /*
+        return the creation date of the item
+         */
         return this.date;
     }
 
     public void setLocation(ArrayList<StorageItem> location) {
+        /*
+        set the new location for the item
+        @param: location: the new location
+         */
         this.location = location;
     }
 
     public ArrayList<StorageItem> getLocation() {
+        /*
+        return the location of the item
+         */
         return this.location;
     }
 
     void makeData(long rndTime) {
+        /*
+        receives a random number and cast it to date and time. initialize the creation date of the item.
+        @param: rndTime: random num to cast
+         */
         if (rndTime < 0) {
             rndTime = -rndTime;
         }
@@ -40,6 +63,10 @@ abstract class StorageItem {
     }
 
     void setSize(int size) {
+        /*
+        set the item size
+        @param: the item size
+         */
         this.size = size;
     }
 

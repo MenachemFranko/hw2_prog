@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Folder extends StorageItem {
     /*
-     * folder is a storage item which may be containing more items
+     * folder is a storage item which may be containing more items (has content list)
      */
     ArrayList<StorageItem> content;
 
